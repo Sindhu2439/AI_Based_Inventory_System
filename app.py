@@ -31,7 +31,7 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 @app.errorhandler(404)
 def not_found(error):
     if request.path.startswith('/api/'):
-        return jsonify({'success': False, 'error': 'Endpoint not found'}), 404
+        return jsonify({'success': False, 'error': 'Endpoint is not found'}), 404
     return error
 
 @app.errorhandler(500)
