@@ -211,7 +211,7 @@ def register():
             conn.commit()
         except sqlite3.IntegrityError:
             conn.close()
-            return render_template('register.html', error="Username or email already exists")
+            return render_template('register.html', error="Username or email already exists please enter new one")
         conn.close()
         return redirect(url_for('login'))
     
